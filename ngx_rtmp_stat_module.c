@@ -482,7 +482,9 @@ ngx_rtmp_stat_live(ngx_http_request_t *r, ngx_chain_t ***lll,
                     NGX_RTMP_STAT_L("</timestamp>");
 
                     if (ctx->publishing) {
-                        NGX_RTMP_STAT_L("<publishing/>");
+                        NGX_RTMP_STAT_L("<publishing>1</publishing>");
+                    }else{
+                    	NGX_RTMP_STAT_L("<publishing>0</publishing>");
                     }
 
                     if (ctx->active) {
